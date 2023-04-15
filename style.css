@@ -20,34 +20,41 @@ body {
   background: #293447;
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 0px 10px#212837;
 }
 
 .gameScoreContainer {
   color: #b8c6dc;
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 20px 25px;
   font-size: 1.1rem;
 }
 
 .gameBody {
   display: grid;
-  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+  grid-template: repeat(20, 1fr) / repeat(20, 1fr);
   height: 100%;
   width: 100%;
   background: #212837;
 }
 
 .gameBody .food {
-  background: red;
+  background: #ff0000;
+  box-shadow: 0 0 10px #ff0000;
+  border-radius: 5px;
 }
 
 .gameBody .head {
-  background: blue;
+  background: #ee00ff;
+  box-shadow: 0 0 10px #ee00ff;
+  border-radius: 12px;
 }
-
 .gameBody .snake {
-  background: purple;
+  background: #800080;
+  box-shadow: 0 0 10px #800080;
+  border-radius: 8px;
+
 }
 .controls{
   display: none;

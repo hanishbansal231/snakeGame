@@ -31,7 +31,7 @@ const isCollide = (snake) => {
             return true;
         }
     }
-    if (snake[0].x >= 30 || snake[0].x <= 0 || snake[0].y >= 30 || snake[0].y <= 0) {
+    if (snake[0].x >= 20 || snake[0].x <= 0 || snake[0].y >= 20 || snake[0].y <= 0) {
         return true;
     }
 };
@@ -58,7 +58,7 @@ const gameEngine = () => {
         }
         scorebox.innerHTML = `Score: ${score}`;
         snakeArr.unshift({ x: snakeArr[0].x + inputDir.x, y: snakeArr[0].y + inputDir.y });
-        food = { x: Math.floor(Math.random() * 30) + 1, y: Math.floor(Math.random() * 30) + 1 }
+        food = { x: Math.floor(Math.random() * 20) + 1, y: Math.floor(Math.random() * 20) + 1 }
     }
     // Snake Increase
     for (let i = snakeArr.length - 2; i >= 0; i--) {
