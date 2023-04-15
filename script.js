@@ -6,6 +6,7 @@ let snakeArr = [{ x: 13, y: 17 }];
 let food = { x: 5, y: 7 };
 let score = 0;
 let hiScoreVal = 0;
+let snakeElement; 
 let board = document.querySelector('.gameBody');
 let scorebox = document.querySelector('.score');
 let highScore = document.querySelector('.highScore');
@@ -19,6 +20,8 @@ const musicSound = new Audio('./music/music.mp3');
 const main = (cTime) => {
     window.requestAnimationFrame(main);
     if ((cTime - lastPaintTime) / 1000 < 1 / speed) {
+        snakeElement.classList.add('active');
+        // snakeElement.classList.add('active');
         return;
     }
     lastPaintTime = cTime;
